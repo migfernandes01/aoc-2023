@@ -9,9 +9,11 @@ import (
 	"unicode"
 )
 
+// extract numbers from string (digits), find first and last number, concatenate them, and add to total, then return total in file
+
 func main() {
 	// open file
-	file, err := os.Open("input.txt")
+	file, err := os.Open("../input.txt")
 	defer file.Close()
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -59,5 +61,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Total:", total)
+	fmt.Println("Total:", total) // 55208
 }
